@@ -7,6 +7,32 @@ body {
  
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.footer-btn {
+    background: white;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
 .encabezado{
     background-color: #333;
     color: #fff;

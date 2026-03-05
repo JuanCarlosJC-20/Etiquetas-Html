@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <header class="encabezado"> ETIQUETAS HTML5 </header>
+   <header id="inicio"class="encabezado"> ETIQUETAS HTML5 </header>
    <!-- MENU DE NAVEGACION DEL CONTENIDO -->
   <aside class="nav-contenido">
     <h2>Contenidos</h2>
@@ -21,7 +21,7 @@
 
   <!-- SECTION QUE VA TENER LA ETIQEUTAS ESTRUCTURALES DE HTML -->
   <section  class="contenido" id="estructurales">
-    <h3>Etiquetas estructurales</h2>
+    <h3>Etiquetas estructurales</h3>
     <p>Estas definen la estructura general de una página HTML.</p>
     <ul>
       <li>
@@ -111,7 +111,7 @@
  <!-- section de etiquetas de texto -->
  <section class="contenido" id="texto">
   <ul>
-    <h3>Etiquetas de texto</h2>
+    <h3>Etiquetas de texto</h3>
     <li>
       <div>
           <h4>&lt;h1&gt; a &lt;h6&gt;</h4>
@@ -227,19 +227,322 @@
       
   </ul>
   </section>
-<!-- 
   <section class="contenido id="listas">
-    <h3>Etiquetas de listas</h2>
+    <h3>Etiquetas de listas</h3>
+    <p>
+        Estas etiquetas se utilizan para crear listas de elementos en un documento HTML. 
+        Las listas pueden ser ordenadas, desordenadas o de definición, dependiendo de la etiqueta utilizada.
+    </p>
+      <ul>
+        <li>
+          <div>
+              <h4>&lt;ul&gt;</h4>
+              <p>
+                  Esta etiqueta define una lista desordenada en un documento HTML. 
+                  Se utiliza para agrupar elementos de lista que no tienen un orden específico, generalmente con viñetas.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;ol&gt;</h4>
+              <p>
+                  Esta etiqueta define una lista ordenada en un documento HTML. 
+                  Se utiliza para agrupar elementos de lista que tienen un orden específico, generalmente con números o letras.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;li&gt;</h4>
+              <p>
+                  Esta etiqueta define un elemento de lista en un documento HTML. 
+                  Se utiliza para representar cada elemento dentro de una lista ordenada o desordenada.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;dl&gt;</h4>
+              <p>
+                  Esta etiqueta define una lista de definición en un documento HTML. 
+                  Se utiliza para agrupar términos y sus definiciones, generalmente con un formato de término seguido de su descripción.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;dt&gt;</h4>
+              <p>
+                  Esta etiqueta define un término en una lista de definición en un documento HTML. 
+                  Se utiliza para representar el término que se va a definir dentro de una lista de definición.
+              </p>
+          </div>
+          <li>
+          <div>
+              <h4>&lt;dd&gt;</h4>
+              <p>
+                  Esta etiqueta define una descripción en una lista de definición en un documento HTML. 
+                  Se utiliza para representar la descripción o definición de un término dentro de una lista de definición.
+              </p>
+          </li>
+      </ul>
   </section>
 
-  <section id="formularios">
-    <h3 >Etiquetas de formularios</h2>
+
+  <section id="formularios" class="contenido">
+    <h3 >Etiquetas de formularios</h3>
+      <p>
+        Estas etiquetas se utilizan para crear formularios en un documento HTML. 
+        Los formularios permiten a los usuarios ingresar datos y enviarlos a un servidor para su procesamiento.
+      </p>
+      <ul>
+        <li>
+          <div>
+              <h4>&lt;form&gt;</h4>
+              <p>
+                  Esta etiqueta define un formulario en un documento HTML. 
+                  Se utiliza para agrupar elementos de formulario como campos de entrada, botones y otros controles que permiten a los usuarios ingresar datos.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;input&gt;</h4>
+              <p>
+                  Esta etiqueta define un campo de entrada en un formulario HTML. 
+                  Se utiliza para crear diferentes tipos de campos de entrada, como texto, contraseña, correo electrónico, número, fecha, entre otros.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;label&gt;</h4>
+              <p>
+                  Esta etiqueta define una etiqueta para un elemento de formulario en un documento HTML. 
+                  Se utiliza para asociar una etiqueta descriptiva con un campo de entrada, mejorando la accesibilidad y usabilidad del formulario.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;textarea&gt;</h4>
+              <p>
+                  Esta etiqueta define un área de texto en un formulario HTML. 
+                  Se utiliza para crear un campo de entrada de texto de varias líneas, permitiendo a los usuarios ingresar texto más largo o detallado.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;button&gt;</h4>
+              <p>
+                  Esta etiqueta define un botón en un formulario HTML. 
+                  Se utiliza para crear diferentes tipos de botones, como botones de envío, botones de reinicio o botones personalizados con funciones específicas.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;select&gt;</h4>
+              <p>
+                  Esta etiqueta define un menú desplegable en un formulario HTML. 
+                  Se utiliza para crear una lista de opciones de la cual los usuarios pueden seleccionar una o varias opciones.
+              </p>
+          </div>
+        </li>
+        <li></li>
+          <div>
+              <h4>&lt;option&gt;</h4>
+              <p>
+                  Esta etiqueta define una opción en un menú desplegable en un formulario HTML. 
+                  Se utiliza para crear las diferentes opciones que los usuarios pueden seleccionar dentro de un elemento &lt;select&gt;.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;optgroup&gt;</h4>
+              <p>
+                  Esta etiqueta define un grupo de opciones en un menú desplegable en un formulario HTML. 
+                  Se utiliza para organizar las opciones dentro de un elemento &lt;select&gt; en grupos lógicos.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;fieldset&gt;</h4>
+              <p>
+                  Esta etiqueta define un grupo de elementos relacionados en un formulario HTML. 
+                  Se utiliza para agrupar campos de entrada relacionados dentro de un formulario, mejorando la organización y la accesibilidad.
+              </p>
+          </div>  
+        </li>
+        <li>
+          <div>
+              <h4>&lt;legend&gt;</h4>
+              <p>
+                  Esta etiqueta define una leyenda para un grupo de elementos relacionados en un formulario HTML. 
+                  Se utiliza para proporcionar una descripción o título para un conjunto de campos de entrada agrupados dentro de un elemento &lt;fieldset&gt;.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;datalist&gt;</h4>
+              <p>
+                  Esta etiqueta define una lista de opciones predefinidas para un campo de entrada en un formulario HTML. 
+                  Se utiliza para proporcionar sugerencias o autocompletar opciones a los usuarios mientras ingresan datos en un campo de entrada.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;output&gt;</h4>
+              <p>
+                  Esta etiqueta define un resultado de cálculo o una salida de un formulario HTML. 
+                  Se utiliza para mostrar el resultado de una operación o cálculo realizado en el formulario, como la suma de dos números o la validación de datos.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;progress&gt;</h4>
+              <p>
+                  Esta etiqueta define una barra de progreso en un formulario HTML. 
+                  Se utiliza para mostrar el progreso de una tarea o proceso, como la carga de un archivo o la finalización de una operación.
+              </p>
+          </div>
+        </li>
+        <li>
+          <div>
+              <h4>&lt;meter&gt;</h4>
+              <p>
+                  Esta etiqueta define una medida escalar dentro de un rango conocido en un formulario HTML. 
+                  Se utiliza para mostrar una medida o valor dentro de un rango específico, como la temperatura, el nivel de batería o cualquier otra medida cuantitativa.
+              </p>
+          </div>
+        </li>
+      </ul>
   </section>
-
-  <section id="multimedia">
-    <h3>Etiquetas de multimedia</h2>
-  </section>  -->
-
-
+  <section id="multimedia" class="contenido">
+    <h2>Etiquetas de multimedia</h2>
+    <p>
+        Estas etiquetas se utilizan para insertar y controlar contenido multimedia en un documento HTML, como imágenes, audio y video.
+    </p>
+    <ul>
+      <li>
+        <div>
+            <h4>&lt;img&gt;</h4>
+            <p>
+                Esta etiqueta define una imagen en un documento HTML. 
+                Se utiliza para insertar imágenes en una página web, especificando la fuente de la imagen y otros atributos como el texto alternativo y el tamaño.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;audio&gt;</h4>
+            <p>
+                Esta etiqueta define contenido de audio en un documento HTML. 
+                Se utiliza para insertar archivos de audio en una página web, proporcionando controles para reproducir, pausar y ajustar el volumen del audio.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;video&gt;</h4>
+            <p>
+                Esta etiqueta define contenido de video en un documento HTML. 
+                Se utiliza para insertar archivos de video en una página web, proporcionando controles para reproducir, pausar, ajustar el volumen y cambiar la calidad del video.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;source&gt;</h4>
+            <p>
+                Esta etiqueta define múltiples recursos multimedia para elementos de audio y video en un documento HTML. 
+                Se utiliza para especificar diferentes formatos de archivo para un mismo recurso multimedia, permitiendo que el navegador seleccione el formato compatible.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;track&gt;</h4>
+            <p>
+                Esta etiqueta define pistas de texto para elementos de audio y video en un documento HTML. 
+                Se utiliza para proporcionar subtítulos, descripciones o cualquier otro tipo de texto sincronizado con el contenido multimedia.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;figure&gt;</h4>
+            <p>
+                Esta etiqueta define contenido ilustrativo en un documento HTML. 
+                Se utiliza para agrupar elementos multimedia como imágenes, gráficos o diagramas junto con su leyenda, proporcionando una estructura semántica para el contenido visual.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;figcaption&gt;</h4>
+            <p>
+                Esta etiqueta define una leyenda para un elemento &lt;figure&gt; en un documento HTML. 
+                Se utiliza para proporcionar una descripción o título para el contenido ilustrativo agrupado dentro de un elemento &lt;figure&gt;.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;iframe&gt;</h4>
+            <p>
+                Esta etiqueta define un marco en línea en un documento HTML. 
+                Se utiliza para incrustar otro documento HTML dentro de la página actual, como un video de YouTube, un mapa de Google o cualquier otro contenido externo.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;embed&gt;</h4>
+            <p>
+                Esta etiqueta define un contenedor para contenido externo en un documento HTML. 
+                Se utiliza para incrustar contenido multimedia o interactivo, como archivos Flash, PDF o cualquier otro tipo de contenido que no sea compatible con las etiquetas de audio o video.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;object&gt;</h4>
+            <p>
+                Esta etiqueta define un contenedor para contenido externo en un documento HTML. 
+                Se utiliza para incrustar contenido multimedia o interactivo, como archivos Flash, PDF o cualquier otro tipo de contenido que no sea compatible con las etiquetas de audio o video, proporcionando una alternativa a la etiqueta &lt;embed&gt;.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;canvas&gt;</h4>
+            <p>
+                Esta etiqueta define un área de dibujo en un documento HTML. 
+                Se utiliza para crear gráficos dinámicos, animaciones o cualquier otro tipo de contenido visual generado mediante JavaScript.
+            </p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>&lt;svg&gt;</h4>
+            <p>
+                Esta etiqueta define un contenedor para gráficos vectoriales en un documento HTML. 
+                Se utiliza para crear gráficos escalables y de alta calidad utilizando el lenguaje de gráficos vectoriales SVG (Scalable Vector Graphics).
+            </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <footer>
+    <a href="#inicio" class="footer-btn">Inicio</a>
+  </footer>
 </body>
 </html>
