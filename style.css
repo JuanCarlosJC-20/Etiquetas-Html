@@ -60,12 +60,10 @@ body {
   height: var(--header-height);
   background: linear-gradient(135deg, #1a0533 0%, var(--primary) 50%, #0d3b6e 100%);
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 800;
   letter-spacing: 3px;
-  text-transform: uppercase;
-  box-shadow: 0 2px 20px rgba(108, 99, 255, 0.5);
-  border-bottom: 2px solid var(--primary);
+   border-bottom: 5px solid var(--primary);
 }
 
 /* ===== ASIDE / NAV ===== */
