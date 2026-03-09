@@ -3,23 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Etiquetas HTML5</title>
+  <link rel="icon" href="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-copilot-icon.png" type="image/png">
 </head>
 <body id="inicio">
 
-  <header  class="encabezado">
-    <span>ETIQUETAS HTML5</span>
+  <header class="encabezado">
+    <h1>ETIQUETAS HTML5</h1>
   </header>
 
   <!-- MENÚ DE NAVEGACIÓN -->
   <aside class="nav-contenido">
     <h2>Contenidos</h2>
-    <a class="nav" href="#estructurales">🚧 Estructurales</a>
-    <a class="nav" href="#texto">📑 Texto</a>
-    <a class="nav" href="#listas">📋 Listas</a>
-    <a class="nav" href="#formularios">📤 Formularios</a>
-    <a class="nav" href="#multimedia">🎬 Multimedia</a>
+    <nav>
+      <a class="nav" href="#estructurales">🚧 Estructurales</a>
+      <a class="nav" href="#texto">📑 Texto</a>
+      <a class="nav" href="#listas">📋 Listas</a>
+      <a class="nav" href="#formularios">📤 Formularios</a>
+      <a class="nav" href="#multimedia">🎬 Multimedia</a>
+    </nav>
   </aside>
 
   <main class="main-wrapper">
@@ -242,7 +245,12 @@
       <h3>Etiquetas de Formularios</h3>
       <p class="seccion-intro">Permiten a los usuarios ingresar y enviar datos a un servidor.</p>
       <ul>
-        <li><div class="card"><h4>&lt;form&gt;</h4><p>Agrupa todos los elementos de un formulario.</p></div></li>
+        <li><div class="card"><h4>&lt;form&gt;</h4><p>Agrupa todos los elementos de un formulario. Define el método de envío y la URL destino.</p>
+          <code class="code-snippet">&lt;form action="/enviar" method="post"&gt;
+  &lt;input type="text" name="usuario"&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code>
+        </div></li>
         <li><div class="card"><h4>&lt;input&gt;</h4><p>Campo de entrada (texto, password, email, número, etc.).</p>
           <div class="preview"><input type="text" placeholder="Texto" style="margin:2px"> <input type="number" placeholder="Número" style="margin:2px;width:80px"> <input type="color" style="margin:2px"></div>
         </div></li>
@@ -284,7 +292,15 @@
             </datalist>
           </div>
         </div></li>
-        <li><div class="card"><h4>&lt;output&gt;</h4><p>Muestra el resultado de un cálculo.</p></div></li>
+        <li><div class="card"><h4>&lt;output&gt;</h4><p>Muestra el resultado de un cálculo realizado por un formulario o script.</p>
+          <div class="preview">
+            <label>A: <input type="number" id="numA" value="5" style="width:60px"></label>
+            <label>B: <input type="number" id="numB" value="3" style="width:60px"></label>
+            <button type="button" onclick="document.getElementById('resultado').value = +document.getElementById('numA').value + +document.getElementById('numB').value">Sumar</button>
+            <br>Resultado: <output id="resultado">8</output>
+          </div>
+          <code class="code-snippet">&lt;output id="resultado" for="numA numB"&gt;0&lt;/output&gt;</code>
+        </div></li>
         <li><div class="card"><h4>&lt;progress&gt;</h4><p>Barra de progreso de una tarea.</p>
           <div class="preview"><progress value="65" max="100" style="width:100%"></progress> 65%</div>
         </div></li>
@@ -292,6 +308,98 @@
           <div class="preview"><meter value="0.7" min="0" max="1" style="width:100%"></meter> 70%</div>
         </div></li>
       </ul>
+
+      <!-- Formulario completo funcional -->
+      <div class="formulario-demo">
+        <h4>Formulario completo de ejemplo</h4>
+        <p class="seccion-intro">Un formulario real con múltiples tipos de input, validación y manejo con JavaScript.</p>
+        <form id="formularioContacto" novalidate>
+
+          <fieldset>
+            <legend>Datos personales</legend>
+            <div class="campo">
+              <label for="nombre">Nombre completo <span class="requerido">*</span></label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="campo">
+              <label for="email">Correo electrónico <span class="requerido">*</span></label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="campo">
+              <label for="password">Contraseña <span class="requerido">*</span></label>
+              <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required>
+            </div>
+            <div class="campo">
+              <label for="edad">Edad</label>
+              <input type="number" id="edad" name="edad" min="1" max="120" placeholder="25">
+            </div>
+            <div class="campo">
+              <label for="nacimiento">Fecha de nacimiento</label>
+              <input type="date" id="nacimiento" name="nacimiento">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferencias</legend>
+            <div class="campo">
+              <label for="pais">País</label>
+              <select id="pais" name="pais">
+                <option value="">Selecciona un país...</option>
+                <option value="co">Colombia</option>
+                <option value="mx">México</option>
+                <option value="ar">Argentina</option>
+                <option value="es">España</option>
+              </select>
+            </div>
+            <div class="campo">
+              <p class="campo-label">Género</p>
+              <label class="radio-label"><input type="radio" name="genero" value="m"> Masculino</label>
+              <label class="radio-label"><input type="radio" name="genero" value="f"> Femenino</label>
+              <label class="radio-label"><input type="radio" name="genero" value="o"> Otro</label>
+            </div>
+            <div class="campo">
+              <p class="campo-label">Intereses</p>
+              <label class="check-label"><input type="checkbox" name="interes" value="html"> HTML/CSS</label>
+              <label class="check-label"><input type="checkbox" name="interes" value="js"> JavaScript</label>
+              <label class="check-label"><input type="checkbox" name="interes" value="py"> Python</label>
+            </div>
+            <div class="campo">
+              <label for="rango">Nivel de experiencia: <span id="valorRango">5</span>/10</label>
+              <input type="range" id="rango" name="rango" min="1" max="10" value="5">
+            </div>
+            <div class="campo">
+              <label for="color-fav">Color favorito</label>
+              <input type="color" id="color-fav" name="color" value="#6c63ff">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contacto y mensaje</legend>
+            <div class="campo">
+              <label for="url-web">Sitio web</label>
+              <input type="url" id="url-web" name="url" placeholder="https://tupagina.com">
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000">
+            </div>
+            <div class="campo">
+              <label for="mensaje">Mensaje <span class="requerido">*</span></label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <div class="campo">
+              <label class="check-label"><input type="checkbox" id="terminos" name="terminos" required> Acepto los términos y condiciones</label>
+            </div>
+          </fieldset>
+
+          <div class="form-acciones">
+            <button type="submit">Enviar formulario</button>
+            <button type="reset" class="btn-reset">Limpiar</button>
+          </div>
+          <p id="form-mensaje" class="mensaje-form" role="alert"></p>
+
+        </form>
+      </div>
 
     </section>
 
@@ -324,8 +432,13 @@
 
           </div>
         </li>
-        </li>
-        <li><div class="card"><h4>&lt;track&gt;</h4><p>Pistas de texto (subtítulos) para audio y video.</p></div></li>
+        <li><div class="card"><h4>&lt;track&gt;</h4><p>Pistas de texto (subtítulos, descripciones) para elementos <code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code>.</p>
+          <code class="code-snippet">&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track src="subs.vtt" kind="subtitles"
+         srclang="es" label="Español" default&gt;
+&lt;/video&gt;</code>
+        </div></li>
         <li>
           <div class="card">
             <h4>&lt;figure&gt; y &lt;figcaption&gt;</h4>
@@ -341,8 +454,19 @@
         <li><div class="card"><h4>&lt;iframe&gt;</h4><p>Incrusta otro documento HTML (YouTube, Google Maps, etc.).</p>
           <div class="preview"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-74.1%2C4.5%2C-74.0%2C4.6&layer=mapnik" width="100%" height="120" style="border:1px solid #ccc;border-radius:6px" title="Mapa de ejemplo"></iframe></div>
         </div></li>
-        <li><div class="card"><h4>&lt;embed&gt;</h4><p>Incrusta contenido externo (PDFs, Flash, etc.).</p></div></li>
-        <li><div class="card"><h4>&lt;object&gt;</h4><p>Contenedor para contenido externo, alternativa a &lt;embed&gt;.</p></div></li>
+        <li><div class="card"><h4>&lt;embed&gt;</h4><p>Incrusta contenido externo como PDFs directamente en la página.</p>
+          <code class="code-snippet">&lt;embed src="documento.pdf"
+       type="application/pdf"
+       width="600" height="400"&gt;</code>
+        </div></li>
+        <li><div class="card"><h4>&lt;object&gt;</h4><p>Contenedor para contenido externo. Permite un contenido alternativo si falla la carga.</p>
+          <code class="code-snippet">&lt;object data="archivo.pdf"
+        type="application/pdf"
+        width="600" height="400"&gt;
+  &lt;p&gt;Tu navegador no soporta PDFs.
+     &lt;a href="archivo.pdf"&gt;Descárgalo aquí&lt;/a&gt;.&lt;/p&gt;
+&lt;/object&gt;</code>
+        </div></li>
         <li>
           <div class="card">
           <h4>&lt;canvas&gt;</h4>
@@ -361,7 +485,7 @@
   <p>Gráficos vectoriales escalables directamente en HTML.</p>
 
   <div class="preview">
-    <svg width="200" height="100" xmlns="">
+    <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
 
       <!-- rectángulo -->
       <rect x="10" y="20" width="60" height="40" fill="#6c63ff" rx="8"/>
@@ -390,6 +514,6 @@
     <p>&copy; 2026 — Guía de Etiquetas HTML5</p>
   </footer>
 
-  <script src="/js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

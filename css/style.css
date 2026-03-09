@@ -63,7 +63,15 @@ body {
   font-size: 1.7rem;
   font-weight: 800;
   letter-spacing: 3px;
-   border-bottom: 5px solid var(--primary);
+  border-bottom: 5px solid var(--primary);
+}
+
+.encabezado h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  margin: 0;
 }
 
 /* ===== ASIDE / NAV ===== */
@@ -434,4 +442,128 @@ footer {
   .contenido > ul {
     grid-template-columns: 1fr;
   }
+}
+
+/* ===== NAV ACTIVO (JS IntersectionObserver) ===== */
+.nav.activo {
+  background: rgba(108, 99, 255, 0.2);
+  color: var(--primary);
+  border-left-color: var(--primary);
+}
+
+/* ===== FORMULARIO COMPLETO ===== */
+.formulario-demo {
+  margin-top: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.formulario-demo h4 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.formulario-demo fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.formulario-demo legend {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0 8px;
+}
+
+.campo {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo label,
+.campo-label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.requerido {
+  color: var(--danger);
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="password"],
+.campo input[type="number"],
+.campo input[type="url"],
+.campo input[type="tel"],
+.campo input[type="date"],
+.campo select,
+.campo textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 14px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: var(--font-main);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.campo input[type="range"] {
+  accent-color: var(--primary);
+  width: 100%;
+  cursor: pointer;
+}
+
+.campo input[type="color"] {
+  width: 48px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px;
+  background: var(--bg);
+  cursor: pointer;
+}
+
+.radio-label,
+.check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  font-size: 0.875rem;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.form-acciones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn-reset {
+  background: var(--text-muted);
+}
+
+.btn-reset:hover {
+  background: #6a6a8a;
 }
